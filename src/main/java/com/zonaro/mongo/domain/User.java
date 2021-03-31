@@ -2,11 +2,17 @@ package com.zonaro.mongo.domain;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="user") // dando nome da coleção banco
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id // panssando qual o id
 	private String id;
+	
 	private String name;
 	private String email;
 	
